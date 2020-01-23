@@ -26,13 +26,13 @@ spaces = 2
 exclude = [
     #     'Happy Isles->Little Yosemite Valley',
     #     'Happy Isles->Sunrise/Merced Lake (pass through)',
-    "Glacier Point->Little Yosemite Valley",
-    "Sunrise Lakes",
-    "Lyell Canyon",
+    #     "Lyell Canyon",
+    #     "Sunrise Lakes",
+    #     "Glacier Point->Little Yosemite Valley",
 ]
 
 # Dates you'd like to start on (inclusive of end date)
-dates = pandas.date_range(start="2019-08-30", end="2019-10-05", freq="D")
+dates = pandas.date_range(start="2020-07-12", end="2020-08-30", freq="D")
 dates
 
 # Write output to this file. If the generated output is identical to
@@ -127,11 +127,12 @@ notify = not space_df.empty and output_has_changed and min_report_date <= report
 # Uses https://github.com/n1try/telegram-middleman-bot
 
 # Set enable_middleman to True to receive telegram notification
-enable_middleman = False
+enable_middleman = True
 
 # Get token from messaging /start to @MiddleManBot on Telegram
 # https://telegram.me/MiddleManBot
-token = "replace-with-private-telegram-middlemanbot-token"
+# Do I need the quotes around the token number?
+token = "6540b805-7096-438a-a212-804dab41fc0d"
 
 hostname = "https://middleman.ferdinand-muetsch.de"
 mmb_url = hostname + "/api/messages"
